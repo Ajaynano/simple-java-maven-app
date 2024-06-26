@@ -1,5 +1,5 @@
 name: 'Dependency Review'
-on: [pull_request, push]
+on: [pull_request]
 
 permissions:
   contents: read
@@ -11,5 +11,4 @@ jobs:
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
-        if: ${{ github.base_ref }}
         uses: actions/dependency-review-action@v4
